@@ -17,14 +17,21 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView mRecylcerView;
     RecyclerView.Adapter mAdapter;
     RecyclerView.LayoutManager mlayoutManager;
-    String Lol= "Resurants";
     ImageButton reportpg;
+    ImageButton profilepg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         reportpg=(ImageButton) findViewById(R.id.reportbtn);
+        profilepg=(ImageButton) findViewById(R.id.profilebtn);
+        profilepg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                userpage();
+            }
+        });
         reportpg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +55,11 @@ public class HomeActivity extends AppCompatActivity {
         mRecylcerView.setLayoutManager(mlayoutManager);
         mRecylcerView.setAdapter(mAdapter);
 
+    }
+
+    private void userpage() {
+        Intent intent=new Intent(this,UserProfileActivity.class);
+        startActivity(intent);
     }
 
     private void reportpage() {
