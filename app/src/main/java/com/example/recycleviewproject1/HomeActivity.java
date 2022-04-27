@@ -40,8 +40,9 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         ArrayList<RecyclerItem> recyclerItems = new ArrayList<>();
-        recyclerItems.add(new RecyclerItem(R.drawable.img,"Buffalo",R.drawable.reaval));
         recyclerItems.add(new RecyclerItem(R.drawable.bogie,"Cafe Bogie",R.drawable.reunaval));
+        recyclerItems.add(new RecyclerItem(R.drawable.img,"Buffalo",R.drawable.reaval));
+
         recyclerItems.add(new RecyclerItem(R.drawable.kabajee,"Kabajee",R.drawable.reaval));
         recyclerItems.add(new RecyclerItem(R.drawable.tandoor,"Tandoor",R.drawable.reunaval));
         recyclerItems.add(new RecyclerItem(R.drawable.img,"Buffalo",R.drawable.reunaval));
