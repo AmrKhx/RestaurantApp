@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecycleViewProject1">
         <activity
+            android:name=".UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KabajeesActivityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignupActivity"
             android:exported="false" />
         <activity

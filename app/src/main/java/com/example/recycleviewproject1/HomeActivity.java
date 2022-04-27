@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.util.ArrayList;
 
@@ -14,11 +18,20 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView.Adapter mAdapter;
     RecyclerView.LayoutManager mlayoutManager;
     String Lol= "Resurants";
+    ImageButton reportpg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        reportpg=(ImageButton) findViewById(R.id.reportbtn);
+        reportpg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                reportpage();
+            }
+        });
+
         ArrayList<RecyclerItem> recyclerItems = new ArrayList<>();
         recyclerItems.add(new RecyclerItem(R.drawable.img,"Buffalo",R.drawable.reaval));
         recyclerItems.add(new RecyclerItem(R.drawable.bogie,"Cafe Bogie",R.drawable.reunaval));
@@ -35,6 +48,11 @@ public class HomeActivity extends AppCompatActivity {
         mRecylcerView.setLayoutManager(mlayoutManager);
         mRecylcerView.setAdapter(mAdapter);
 
+    }
+
+    private void reportpage() {
+        Intent intent=new Intent(this,ReportActivity.class);
+        startActivity(intent);
     }
 }
 

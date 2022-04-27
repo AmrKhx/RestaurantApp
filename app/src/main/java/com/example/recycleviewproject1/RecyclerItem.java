@@ -5,14 +5,12 @@ package com.example.recycleviewproject1;
 public class RecyclerItem {
     private int mImageRes;
     private String mText1;
-
     private int reRev;
     public RecyclerItem(int mImageRes,String mtext1,int reRev){
         this.mImageRes=mImageRes;
 
         this.reRev=reRev;
         this.mText1=mtext1;
-
 
 
     }//end of const.
