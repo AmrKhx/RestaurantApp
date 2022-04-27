@@ -79,6 +79,8 @@
         android:elevation="6dp"
         android:ems="12"
         android:hint="Username"
+        android:drawableStart="@drawable/ic_user"
+
         android:inputType="textEmailAddress"
         android:paddingStart="8dp"
         android:textSize="15dp"
@@ -96,6 +98,9 @@
         android:elevation="6dp"
         android:ems="12"
         android:hint="password"
+        android:drawableStart="@drawable/ic_pass2"
+        android:drawablePadding="4dp"
+
         android:inputType="text"
         android:paddingStart="8dp"
         android:textSize="15dp"
