@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">RecycleViewProject1</string>
+    <string name="signup">Sign Up</string>
+    <string name="Joinus"> Join Us</string>
+    <string name="user"> Username</string>
+    <string name="password"> Password</string>
+    <string name="email"> Email</string>
+    <string name="signin">Sign In</string>
+</resources>

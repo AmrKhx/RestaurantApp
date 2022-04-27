@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RecycleViewProject1</string>
+    <string name="signup">سجل الان</string>
+    <string name="Joinus">انضم الينا</string>
+    <string name="user">اسم المستخدم</string>
+    <string name="password">الرقم السري</string>
+    <string name="email">البريد الاكتروني</string>
+    <string name="signin">تسجيل الدخول</string>
+</resources>
