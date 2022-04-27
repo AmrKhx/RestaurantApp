@@ -59,6 +59,6 @@ TextView signupage;
     private void homeactivity() {
         Intent intent=new Intent(this,HomeActivity.class);
         startActivity(intent);
-amr1
+
     }
 }
