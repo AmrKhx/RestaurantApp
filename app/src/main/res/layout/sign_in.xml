@@ -70,7 +70,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress4"
+        android:id="@+id/username1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
@@ -80,17 +80,16 @@
         android:ems="12"
         android:hint="Username"
         android:drawableStart="@drawable/ic_user"
-
         android:inputType="textEmailAddress"
         android:paddingStart="8dp"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/pass"
+        app:layout_constraintBottom_toTopOf="@+id/pass1"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/pass"
+        android:id="@+id/pass1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
