@@ -44,10 +44,10 @@ SharedPreferences sharedPreferences;
                     String usr=username.getText().toString();
                     String pw=username.getText().toString();
                     SharedPreferences.Editor editor=sharedPreferences.edit();
-                    editor.putString("username",usr);
+                   editor.putString("username",usr);
                     editor.putString("pw",usr);
                     editor.commit();
-                    Toast.makeText(SignInActivity.this, "Data Saved", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(SignInActivity.this, "Data Saved", Toast.LENGTH_SHORT).show();
                 }
                 { String notify="Welcome to our Home";
                 Notification.Builder builder = new Notification.Builder(SignInActivity.this);

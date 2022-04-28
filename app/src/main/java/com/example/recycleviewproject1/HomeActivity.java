@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -19,13 +22,19 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView.LayoutManager mlayoutManager;
     ImageButton reportpg;
     ImageButton profilepg;
+    TextView textpref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        textpref=(TextView)findViewById(R.id.preftext) ;
+
         reportpg=(ImageButton) findViewById(R.id.reportbtn);
         profilepg=(ImageButton) findViewById(R.id.profilebtn);
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("my prefs", Context.MODE_PRIVATE);
+        String usrname = sharedPreferences.getString("username","Welcome");
+        textpref.setText(usrname);
         profilepg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
