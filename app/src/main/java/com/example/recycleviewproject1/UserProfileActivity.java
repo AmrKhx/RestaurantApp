@@ -14,12 +14,14 @@ ImageButton contbtn;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_profile);
         contbtn=findViewById(R.id.contbtn);
+        
         contbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(UserProfileActivity.this,HomeActivity.class);
+               Toast.makeText(this, "profile saved", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
-
+                
             }
         });
 
