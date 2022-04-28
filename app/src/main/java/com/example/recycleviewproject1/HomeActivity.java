@@ -22,6 +22,7 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView.LayoutManager mlayoutManager;
     ImageButton reportpg;
     ImageButton profilepg;
+    Button invtbtn;
     TextView textpref;
 
     @Override
@@ -32,9 +33,17 @@ public class HomeActivity extends AppCompatActivity {
 
         reportpg=(ImageButton) findViewById(R.id.reportbtn);
         profilepg=(ImageButton) findViewById(R.id.profilebtn);
+        invtbtn=(Button) findViewById(R.id.btniv);
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("my prefs", Context.MODE_PRIVATE);
-        String usrname = sharedPreferences.getString("username","Welcome");
-        textpref.setText(usrname);
+        String usrname = sharedPreferences.getString("username","   ");
+        textpref.setText("Welcome"+" " +usrname);
+        invtbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent intent=new Intent(HomeActivity.this,InvitePageActivity.class);
+               startActivity(intent);
+            }
+        });
         profilepg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,6 +56,7 @@ public class HomeActivity extends AppCompatActivity {
                 reportpage();
             }
         });
+
 
         ArrayList<RecyclerItem> recyclerItems = new ArrayList<>();
         recyclerItems.add(new RecyclerItem(R.drawable.kabajee,"Kabajee",R.drawable.reaval));

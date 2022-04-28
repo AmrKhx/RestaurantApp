@@ -25,6 +25,9 @@
             android:name=".HomeActivity"
             android:exported="true" />
         <activity
+            android:name=".InvitePageActivity"
+            android:exported="true" />
+        <activity
             android:name=".SignInActivity"
             android:exported="true">
             <intent-filter>
