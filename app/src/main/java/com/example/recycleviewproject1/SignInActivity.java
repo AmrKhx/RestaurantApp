@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,12 +19,16 @@ import android.widget.Toast;
 public class SignInActivity extends AppCompatActivity  {
 ImageButton signinbtn;
 TextView signupage;
+EditText username,password;
+
 SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_in);
         sharedPreferences=getSharedPreferences("my prefs",Context.MODE_PRIVATE);
+        username=(EditText)findViewById(R.id.username1);
+        password=(EditText)findViewById(R.id.pass1);
         signinbtn=(ImageButton) findViewById(R.id.signbtn);
         signupage=(TextView)findViewById(R.id.signup);
         signupage.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +40,16 @@ SharedPreferences sharedPreferences;
         signinbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String notify="Welcome to our Home";
+                {
+                    String usr=username.getText().toString();
+                    String pw=username.getText().toString();
+                    SharedPreferences.Editor editor=sharedPreferences.edit();
+                    editor.putString("username",usr);
+                    editor.putString("pw",usr);
+                    editor.commit();
+                    Toast.makeText(SignInActivity.this, "Data Saved", Toast.LENGTH_SHORT).show();
+                }
+                { String notify="Welcome to our Home";
                 Notification.Builder builder = new Notification.Builder(SignInActivity.this);
                 builder.setSmallIcon(R.drawable.ic_notif);
                 builder.setContentTitle("Welcome");
@@ -47,7 +61,7 @@ SharedPreferences sharedPreferences;
                 PendingIntent pendingIntent = PendingIntent.getActivity(SignInActivity.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
                 builder.setContentIntent(pendingIntent);
                 NotificationManager notificationManager=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-                notificationManager.notify(0,builder.build());
+                notificationManager.notify(0,builder.build());}
 
             }
         });

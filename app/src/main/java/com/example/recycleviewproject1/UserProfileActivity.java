@@ -19,7 +19,6 @@ ImageButton contbtn;
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(UserProfileActivity.this,HomeActivity.class);
-               Toast.makeText(this, "profile saved", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
                 
             }
